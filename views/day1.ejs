@@ -1,0 +1,49 @@
+<!-- views/test.ejs -->
+<!doctype html>
+<html>
+<head>
+    <title>Node Authentication</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css"/>
+</head>
+<body>
+
+<div class="introboxmidTOP">
+<h1> test to: add file</h1>
+<form method='post', name="addnote", accept-charset="uft-8", action="/test/addnote">
+  <input type="text" name="addin" placeholder="any notes about today?">
+  <input type="submit" name="submit">
+</form>
+</div>
+
+<div class= "picturebox"><img src="/styles/calf2.jpg"></div>
+
+<div class="introboxmidTOP">
+<h1> test to: Complete Day</h1>
+<form method='post', name="doneday", accept-charset="uft-8", action="/day1/doneday">
+  <input type="submit" name="doneday" value="COMPLETE EXCERCISE!">
+</form>
+</div>
+
+<!-- LOCAL INFORMATION -->
+<div class="introboxmid">
+  <h3><span class="fa fa-user"></span> User Info</h3>
+      <p>
+          <strong>USER ID:</strong> <%= user._id %><br>
+          <strong>E-MAIL:</strong> <%= user.local.email %><br>
+          <strong>LAST LOGIN:</strong> <%= user.datedata.lastlogin %> </br>
+          <strong>JOIN DATE:</strong> <%= user.datedata.joindate %> </br>
+          <strong>DAY 1</strong>: <%= user.inapp.day1 %> </br>
+          <strong>DAY 2</strong>: <%= user.inapp.day2 %> </br>
+          <strong>DAY 3</strong>: <%= user.inapp.day3 %> </br>
+          <strong>DAY 4</strong>: <%= user.inapp.day4 %> </br>
+          <strong>DAY 5</strong>: <%= user.inapp.day5 %> </br>
+          <strong>DAY 6</strong>: <%= user.inapp.day6 %> </br>
+          <strong>DAY 7</strong>: <%= user.inapp.day7 %> </br>
+          <strong>USER NOTES: </strong><%= user.notes.addin %> </br>
+      </p>
+  </div>
+
+</body>
+</html>

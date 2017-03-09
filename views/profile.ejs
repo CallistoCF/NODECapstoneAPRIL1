@@ -1,0 +1,65 @@
+<!-- views/profile.ejs -->
+<!doctype html>
+<html>
+<head>
+    <title>Node Authentication</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css"/>
+</head>
+<body>
+  <div class="introboxtop"></div>
+  <div class="introboxmidTOP">
+    <div class="page-header text-center">
+        <h1>Welcome <%= user.local.email %> !</h1>
+    </div>
+  </div>
+  <!-- test -->
+  <div class= "daybox">
+    <div class="innerbox">
+          <a href="/test" class="btn btn-default btn-sm">TEST</a>
+    </div>
+    <!-- DAY 1 -->
+    <% if (user.inapp.day1 == false) { %>
+      <div class="shady">
+              DAY 1 DONE!
+      </div>
+    <% }
+    else {
+      %> <div class="innerbox">
+              <a href="/day1" class="btn btn-default btn-sm">DAY 1</a>
+      </div> <%
+    } %>
+    <!-- DAY 2 -->
+    <% if (user.inapp.day2 == false) { %>
+      <div class="shady">
+              DAY 2
+      </div>
+    <% }
+    else {
+      %> <div class="innerbox">
+              <a href="/day2" class="btn btn-default btn-sm">DAY 2</a>
+      </div> <%
+    } %>
+    <!-- DAY 3 -->
+    <% if (user.inapp.day3 == false) { %>
+      <div class="shady">
+              DAY 3
+      </div>
+    <% }
+    else {
+      %> <div class="innerbox">
+              <a href="/day3" class="btn btn-default btn-sm">DAY 3</a>
+      </div> <%
+    } %>
+
+  </div>
+
+          <div class="bottombar">
+            <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+          </div>
+
+          <div class="introboxbottom">
+          </div>
+</body>
+</html>
